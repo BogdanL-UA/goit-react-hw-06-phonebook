@@ -13,9 +13,8 @@ const contactsSlice = createSlice({
         };
       },
     },
-    deleteContact: (state, { payload }) => {
-      state.filter(({ id }) => id !== payload);
-    },
+    deleteContact: (state, { payload }) =>
+      state.filter(({ id }) => id !== payload),
   },
 });
 

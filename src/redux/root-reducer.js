@@ -4,15 +4,15 @@ import contactsReducer from './contacts/contacts-slice';
 import filterReducer from './filter/filter-slice';
 import storage from 'redux-persist/lib/storage';
 
-const persistConfig = {
-  key: 'root',
-  storage,
-};
-
 const rootReducer = combineReducers({
   contacts: contactsReducer,
   filter: filterReducer,
 });
+
+const persistConfig = {
+  key: 'root',
+  storage,
+};
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
